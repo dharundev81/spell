@@ -1,0 +1,98 @@
+<div view-title="login" style="background-color: #fddf2f; overflow-y: auto;">
+    <div ng-controller="hangmanController1" class="bg-pat2s container">
+        <div class="container">
+             <div class="row">
+                <div class="col-md-4">
+                <img src="img/Spell.jpg" >
+                </div>
+                <div class="col-md-5" ng-include="'templates/home-new/home-desk.html'"></div>
+            </div> 
+        </div>
+        <center class="font-20 p-left-3 m-bottom-10 font-class"> 
+            leader Board
+        </center>
+        <div class="row mp-top-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 col-sm-12 scorecard1 padding-leaderboard">
+                <center>
+                    <table class="table table-bordered text-align" id="example">
+                        <thead>
+                            <tr>
+                                <th class="font-class" colspan="2">Hangman</th>
+                            </tr>
+                            <tr>
+                                <th><div class="font-class">User Name</div></th>
+                                <th><div class="font-class">High Score</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="list in leaderboard_list_data">
+                                <td>
+                                    <div class="font-class">{{list.username}}</div>
+                                </td>
+                                <td>
+                                    <div class="font-class">{{list.score}}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--<div class="list">
+                        <div class="row">
+                            <div class="col">
+                                <div class="font-class">
+                                    User Name
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="font-class">
+                                    HighScore
+                                </div>
+                            </div>
+                        </div>
+                        <a class="item1" ng-repeat="list in leaderboard_list_data">
+                        <div class="row">
+                            <div class="col">
+                                <div class="font-class">{{list.username}}</div> 
+                            </div>
+                            <div class="col">
+                                <div class="font-class">{{list.score}}</div> 
+                            </div>
+                        </div> 
+                        </a>
+                    </div>-->
+                </center>
+            </div><div class="col-md-1"></div>
+            <div class="col-md-5 col-sm-12 scorecard1 padding-leaderboard">
+                <center>
+                    <table class="table table-bordered text-align" id="example">
+                        <thead>
+                            <tr>
+                                <th class="font-class" colspan="2">Quiz</th>
+                            </tr>
+                            <tr>
+                                <th><div class="font-class">User Name</div></th>
+                                <th><div class="font-class">High Score</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="list1 in leaderboard_list_data1">
+                                <td>
+                                    <div class="font-class">{{list1.username}}</div>
+                                </td>
+                                <td>
+                                    <div class="font-class">{{list1.score}}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+        </div>
+       
+        <!--<div class="row m-bottom-20">
+            <div class="col-md-12">
+            <img src="img/grass.png" style="width:100%">
+            </div>
+        </div>-->
+    </div>
+</div>

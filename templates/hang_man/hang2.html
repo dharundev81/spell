@@ -1,0 +1,40 @@
+<ion-view view-title="hang_man">
+  <ion-content class="bg-pat2" ng-controller="hangmanController1">
+
+<div>
+	<div>
+		
+	</div>
+</div>
+ <div class="sibenice">
+      <div class="podstava"></div>
+      <div class="verline"></div>
+      <div class="nosnik"></div>
+      <div class="horline"></div>
+      <div class="provaz"></div>
+      <div class="hlava" style="background-color: transparent;"></div>
+      <div class="telo"></div>
+      <div class="pruka"></div>
+      <div class="lruka"></div>
+      <div class="lnoha"></div>
+      <div class="pnoha"></div>
+    </div>
+    <div class="text">
+      <div class="otazka"></div>
+      <div class="outer">
+        <div class="tajenka"></div>
+      </div>
+      <br /><br /><br /><br />
+      <div class="input">
+        <input id="letterIn" type="text" maxlength="1" value="" />
+        <button id="guess">Hádej</button>
+      </div>
+      <p>Špatná písmena:</p>
+      <div class="badLetters"></div>
+      <button id="reset">Reset</button>
+      <button id="next">Další</button>
+      <div class="win"><h1>Uhádl jsi vše!</h1></div>
+      <div class="lose"><h1>Prohrál jsi.</h1></div>
+    </div>
+  </ion-content>
+</ion-view>

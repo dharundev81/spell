@@ -1,0 +1,62 @@
+<div view-title="login">
+    <div ng-controller="hangmanController1" class="bg-pat2s" scroll=false style="background-color: #fddf2f;">
+        <div class="m-top-0 container">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="img/Spell.jpg" >
+                </div>
+                <div class="col-md-5" ng-include="'templates/home-new/home-desk.html'"></div>
+            </div>            
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <!--<button class="button button-block border-radius-custom custom-border" ng-click="get_questions_values()">
+                    <p class="button-c-class">Play game </p>
+                    </button>-->
+                    <div class="hangman" id="hangman">
+
+                    </div>
+                </div> 
+            </div>
+            <!--<div class="row">
+                <div class="col-md-4 offset-md-4">
+                <button class="button button-block border-radius-custom custom-border" ui-sref="user.about"> 
+                <p class="button-c-class">About</p>
+                </button>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                <button class="button button-block border-radius-custom custom-border" ng-click="exit()">
+                <p class="button-c-class">Exit</p>
+                </button>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                <button class="button button-block border-radius-custom custom-border" ui-sref="user.leaderboard">
+                <p class="button-c-class">leaderboard</p>
+                </button>
+                </div> 
+            </div>-->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="buttonwd  font-class" style="width: 80%; background-color: #8D6E63;" ng-click="get_questions_values()">
+                        <div class="" style="font-size:20px" >Hangman</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="buttonwd  font-class" style="width: 80%;     background-color: #8D6E63;" ng-click="quizz_questions()">
+                        <div class="" style="font-size:20px" >Quiz</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row ">
+            <div class="col-md-12">
+            <img src="img/grass.png" style="width:100%">
+            </div>
+        </div>
+    </div>
+</div>

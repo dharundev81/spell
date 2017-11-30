@@ -1,0 +1,24 @@
+.static{
+	position: static;
+}
+
+.relative{
+	position: relative;
+}
+
+.fixed{
+	position: fixed;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.set-background{
+	z-index: -1;
+}
+
+.sticky-background{
+	background: fixed;
+}
+

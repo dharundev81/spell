@@ -1,0 +1,180 @@
+<div view-title="" class="bg-pat2 overflow-y" >
+    <div class="container" ng-controller="question">
+      <div class="row">
+          <div class="col-md-4">
+          <img src="img/Spell.jpg" >
+          </div>
+          <div class="col-md-5" ng-include="'templates/home-new/home-desk.html'"></div>
+          <!--<div class="col-md-5 btn" ng-click="go_back1()"> Back </div>-->
+      </div>
+    
+      <div class="row scorecard1 margin-bottom-20">
+          <div class="col-md-6 pull-left" align="left">
+            <div>
+              <p class="font-class margin-bottom-0">{{counter}} Sec</p>
+            </div>
+          </div>
+      
+          <div class="col-md-6 pull-right" align="right">
+            <div>
+              <p class="font-class margin-bottom-0" >Score {{score_value}}</p>
+            </div>
+          </div>
+      </div>
+
+      <!--<div class="row" ng-repeat="item in questions">
+        <table class="table" ng-if="quizz_index == $index">
+          <thead>
+            <tr>
+              <th>
+                  Level  Question : {{level}}
+              </th>
+            </tr>
+            <tr>
+              <th>
+                  {{item.question}}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                  {{item.choice_1}}
+              </td>
+              <td>
+                {{item.choice_2}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  {{item.choice_3}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  {{item.choice_4}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>-->
+      <div class="row scorecard1">
+        <div class="col-md-12">
+            <div id="add_class" ng-repeat="item in questions">
+              <div ng-if="quizz_index == $index" class="">
+                
+                <div class="row">
+                  <div class="col-md-12">Level  Question : {{level}}</div>
+                  <div class="col-md-12"><h5 style="float:left">Question &nbsp{{quizz_index}}: &nbsp </h5> <h3 class="quizz-ques">{{item.question}}</h3></div>
+
+                  <div class="row">
+                    <div class="col-md-1 offset-5">
+                      <div class="form-check form-check-inline">
+                        
+                          <input class="form-check-input radio" type="radio" ng-init="button.value=item.choice_1" value={{item.choice_1}} ng-model="button.value" >
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6 pull-left"><p class="ex1 font-class1  opaq-bg margin-bottom-0 " >{{item.choice_1}}</p></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-1 offset-5">
+                      <div class="form-check form-check-inline">
+                        
+                          <input class="form-check-input radio" type="radio"  value="{{item.choice_2}}" ng-model="button.value" >
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6"><p class="ex1 font-class1  opaq-bg margin-bottom-0" >{{item.choice_2}}</p></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-1 offset-5">
+                      <div class="form-check form-check-inline">
+                        
+                          <input class="form-check-input radio" type="radio"  value="{{item.choice_3}}" ng-model="button.value" >
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6"><p class="ex1 font-class1  opaq-bg margin-bottom-0" >{{item.choice_3}}</p></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-1 offset-5">
+                      <div class="form-check form-check-inline">
+                        
+                          <input class="form-check-input radio" type="radio"  value="{{item.choice_4}}" ng-model="button.value" >
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6"><p class="ex1 font-class1  opaq-bg margin-bottom-0" >{{item.choice_4}}</p></div>
+                  </div>
+
+                  <div class="row text-align-center">
+                    <div class="col-md-12">
+                      <button type="sumbit" class="btn buttonwd margin-10px" style="background-color: #8D6E63; color: rgb(255, 255, 208);" ng-click="correcting_values(item,item.answer,button.value)"> Submit </button>
+                    </div>
+                  </div>
+                  
+                  <!--<div class="col-md-12"><p class="ex1 font-class  opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_2)">{{item.choice_2}}</p></div>
+                  <div class="col-md-12"><p class="ex1 font-class  opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_3)">{{item.choice_3}}</p></div>
+                  <div class="col-md-12"><p class="ex1 font-class  opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_4)">{{item.choice_4}}</p></div>-->
+                </div>
+                
+                <!--<div class="row">
+                  <table class="table" style="text-align: center;">
+                    <thead>
+                      <tr>
+                        <th colspan="4">
+                          Level  Question : {{level}}
+                        </th>
+                      </tr>
+                      <tr>
+                        <th colspan="4">
+                          {{item.question}}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          
+                          <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_1)">{{item.choice_1}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                         
+                          <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_2)">{{item.choice_2}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_3)">{{item.choice_3}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_4)">{{item.choice_4}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>-->
+              </div>     
+            </div>
+          </div>
+      </div>
+
+      <div id="snackbar">Correct</div>
+
+      <div id="snackbar2">Wrong</div>
+  
+      <!-- <img src="img/aaazzz.gif" class=""> -->
+    </div>
+</div>

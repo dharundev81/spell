@@ -1,0 +1,103 @@
+<ion-view view-title="Got" ng-controller="question">
+  <ion-content class="hero-bkg-animated1">
+  
+ <div class="row">
+    <div class="col" align="left">
+<div>
+   <p class="color-white font-20 font-bold theme-col">{{counter}} Sec</p>
+</div>
+    </div>
+
+    <div class="col" align="right">
+      <div>
+   <p class="color-white font-20 font-bold theme-col" >Score {{score_value}}</p>
+</div>
+    </div>
+ </div>
+
+<div class="row">
+   <div class="col">
+ <div id="add_class" class="mp-top-15  animated zoomInDown" ng-repeat="item in questions">
+ <div ng-if="quizz_index == $index" class="own_class">
+     <p class="zoomOutDown">
+   <center class="font-class ">
+     Level  Question : {{level}}
+   </center> 
+ </p>
+    <p class="font-class2 mp-top-10">
+    {{item.question}} ?</p>
+
+<!-- <div class="row">
+   <div class="col">
+    <p class="font-class m-top-25 opaq-bg">A. Play computer games</p>
+      
+   </div>
+   <div class="col">
+    <p class="font-class m-top-25 opaq-bg">B. Play sport and exercise</p>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col">
+    <p class="font-class m-top-25 opaq-bg">C. Watch television</p>
+      
+   </div>
+   <div class="col">
+    <p class="font-class m-top-25 opaq-bg">D. Eat cake</p>
+   </div>
+</div> --><div class="row">
+   <div class="col">
+      <p class="border-class mp-top-3">
+   </div>
+</div>
+<div class="mp-top-4">
+   <p >
+   <center class="font-class" >
+      Options :
+   </center> 
+ </p>
+ <div >     
+      <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_1)">{{item.choice_1}}</p>
+      <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_2)">{{item.choice_2}}</p>
+      <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_3)">{{item.choice_3}}</p>
+      <p class="ex1 font-class m-top-25 opaq-bg " ng-click="correcting_values(item,item.answer,item.choice_4)">{{item.choice_4}}</p>
+   <!--  <p class="font-class m-top-25 opaq-bg " >B. Play sport and exercise</p>
+    <p class="font-class m-top-25 opaq-bg "> C. Watch television</p>
+    <p class="font-class m-top-25 opaq-bg ">D. Eat cake</p> -->
+ </div>
+  
+</div>
+
+ </div>     
+ </div>
+
+   </div>
+
+</div>
+ 
+<!-- <div class="row mp-top-20">
+   <div class="col ">
+      <p class="own_class1">A. Play computer games</p>
+   </div>
+   <div class="col">
+      <p class="own_class1">B. Play sport and exercise</p>
+   </div>
+</div> -->
+
+<!-- <div class="row">
+   <div class="col">
+      <p class="own_class1">C. Watch television</p>
+   </div>
+   <div class="col">
+      <p class="own_class1">D. Eat cake</p>
+   </div>
+</div> -->
+
+
+    <img src="img/aaazzz.gif" class="position_set width-40">
+
+
+
+
+  </ion-content>
+</ion-view>

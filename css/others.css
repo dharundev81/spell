@@ -1,0 +1,93 @@
+.clear{
+	clear: both;
+}
+
+.overflow-none{
+	overflow: none;
+}
+
+.overflow-hidden{
+	overflow: hidden;
+}
+
+.float-right{
+	float: right;
+}
+
+.float-left{
+	float: left;
+}
+
+.width-100{
+	width: 100%;
+}
+
+.width-80{
+	width:80%;
+}
+.width-50{
+	width: 50%;
+}
+
+.height-p-61{
+	height: 61%;
+	}    
+.custom-border{
+    background-color: rgba(195, 173, 91, 0.7);
+}
+	.test-align-center{
+		text-align: center !important;
+	}
+	.border-radius-custom{
+    border-radius: 55px 10px;
+	}
+
+	.button-c-class{
+    background: #7f4343;
+    /*border-radius: 38px;*/
+    border-radius: 55px 10px;
+    padding: 0px;
+    margin: 0 0 0px !important;
+    font: italic small-caps bolder condensed 16px/3 cursive;
+    font-size: large;
+    color: white;
+}
+
+.input-c-class {
+    background: #f1f0f0;
+    border-radius: 38px;
+    border: 4px solid grey;
+    padding: 0px;
+    margin: 0 0 0px !important;
+    font: italic small-caps bolder condensed 16px/3 cursive;
+    font-size: large;
+    color: #6d0303;
+}
+
+.button-c-class2{
+    background: #7f4343;
+    /*border-radius: 38px;*/
+    border-radius: 55px 10px;
+    padding: 0px;
+    margin: 0 0 0px !important;
+    font: italic small-caps bolder condensed 12px/2 cursive;
+    font-size: large;
+    color: white;
+}
+.button-c-class1 {
+    background: #7f4343;
+    /* border-radius: 38px; */
+    border-radius: 55px 10px;
+    padding: 0px;
+    margin: 0 0 0px !important;
+    font: italic small-caps bolder condensed 16px/2 cursive;
+    font-size: large;
+    color: white;
+}
+.font-class{
+	font: italic small-caps bolder condensed 16px/3 cursive;
+}
+
+.font-class1{
+	font: italic small-caps bolder condensed 12px/3 cursive;
+}

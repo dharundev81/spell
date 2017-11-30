@@ -1,0 +1,65 @@
+<ion-view view-title="">
+  <ion-content class="bg-pat2" ng-controller="hangmanController2">
+
+<!-- <p>Bck</p> -->
+<!-- <div class="row">
+  <div class="col">
+    <button class="button button-block border-radius-custom custom-border" ui-sref="user.home">
+<p class="button-c-class2" >Main menu</p>
+</button>
+  </div>
+  <div class="col">
+    <button class="button button-block border-radius-custom custom-border" ng-click="new_game()">
+<p class="button-c-class2" >New game</p>
+</button>
+  </div>
+  
+</div> -->
+
+
+  <div class="hangman">
+  <div class="hangman-results">
+    <div class="hangman-hangman">
+    <div class="row">
+      <div class="col mp-top-2">
+        <div>
+          <p class="font-16 pp-right-50 font-class1">Total :  {{total_values}} </p>
+          <p class="font-16 pp-right-50 font-class1">Won : {{win_values}} </p>
+
+          <p class="font-16 pp-right-50 font-class1">Lost : {{lose_values}}</p>
+
+        </div>
+      </div>
+      <div class="col">
+        <svg id="hangman-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 500" stroke="#000000" fill="none">
+        <polyline stroke-width="10" stroke-miterlimit="10" points="253.996,142.899 253.996,59.666 
+                                                                   115.663,59.666 115.663,434.999 "/>
+        <line stroke-width="10" stroke-miterlimit="10" x1="392.33" y1="434.999" x2="8.33" y2="434.999"/>
+        <g id="added-parts">
+        </g>
+      </svg>
+      </div>
+    </div>
+      
+    </div>
+    <div class="game-over" style="display: none;">
+      <p class="game-over-won">You won! :)</p>
+
+      <p class="game-over-lost">You lost :(</p>
+       <!-- <button class=" game-over-lost1 button button-positive" ng-click="showAlert()">Alert</button> -->
+      <button id="game-over-replay">Start Over</button>
+    </div>  
+  </div>
+  <div class="hangman-puzzle">
+  </div>
+  <div class="hangman-letters">
+  </div>
+
+  <div> 
+   <p class="font-bold font-20">HINTS :{{given_hint_word1}}</p>
+       <!-- <p class="font-bold font-20">Your Score :{{score_value}}</p> -->
+
+  </div>
+</div>
+  </ion-content>
+</ion-view>

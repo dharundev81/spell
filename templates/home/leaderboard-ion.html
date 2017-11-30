@@ -1,0 +1,59 @@
+<ion-view view-title="login">
+  <ion-content ng-controller="hangmanController1" class="bg-pat2s"  style="background-color: #fddf2f;
+">
+  
+  <center class="font-20 p-left-3 m-bottom-10 font-class"> 
+ leader Board
+</center>
+
+
+
+  <div class="row mp-top-2">
+<div class="col">
+
+<center>
+	<div class="list">
+
+<div class="row">
+	<div class="col">
+		<div class="font-class">
+			User Name
+		</div>
+	</div>
+	<div class="col">
+		<div class="font-class">
+			HighScore
+		</div>
+	</div>
+</div>
+
+  <a class="item1" ng-repeat="list in leaderboard_list_data">
+ <div class="row">
+ 	<div class="col">
+ 		 <div class="font-class">{{list.username}}</div> 
+ 	</div>
+ 	<div class="col">
+ 		 <div class="font-class">{{list.score}}</div> 
+ 	</div>
+ </div> 
+  </a>
+
+
+</div>
+</center>
+ 
+
+</div>
+	
+</div>
+
+<!-- <div class="row m-bottom-20">
+  <div class="col">
+    <img src="img/grass.png" style="width:100%">
+  </div>
+</div> -->
+
+
+
+  </ion-content>
+</ion-view>
