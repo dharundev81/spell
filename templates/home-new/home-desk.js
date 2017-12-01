@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('starter');
-    var hangmanController1 = function ($scope,$state,apiFunc,$rootScope) {
+    var hangmanController1 = function ($scope,$state,apiFunc,$rootScope,$ionicPopup) {
 
  console.log('asd');
 
@@ -73,24 +73,30 @@ $scope.get_questions_values=function(obj){
        
        var hint_val= given_response[0].hint;
        console.log(typeof(hint_val));
-       var hint_arr=hint_val.split(',');
+       var hint_arr=hint_val.split(',@');
 
          var word_val= given_response[0].word;
        console.log(typeof(word_val));
-       var word_arr=word_val.split(',');
+       var word_arr=word_val.split(',@');
 
 
          var id_arr= given_response[0].id_arr;
        console.log(typeof(id_arr));
-       var id_arr=id_arr.split(',');
+       var id_arr=id_arr.split(',@');
+
+       var phonetics= given_response[0].phonetics;
+       console.log(typeof(phonetics));
+       var phonetics=phonetics.split(',@');
        
         localStorage.setItem('given_hint',JSON.stringify(hint_arr));
         localStorage.setItem('given_word',JSON.stringify(word_arr));
         localStorage.setItem('id_arr',JSON.stringify(id_arr));
+        localStorage.setItem('phonetics',JSON.stringify(phonetics));
 
         console.log(localStorage.getItem('given_hint'));
         console.log(localStorage.getItem('given_word'));
         console.log(localStorage.getItem('id_arr'));
+        console.log(localStorage.getItem('phonetics'));
 
     $state.go('user.hang');
 
@@ -129,12 +135,23 @@ $scope.quizz_questions=function(){
               $state.go('user.question');
           // $route.reload();
           }else{
-      MessageNotify(data.message)
+      //MessageNotify(data.message)
+        $scope.showAlert(data.message);
           }
       },function (error) {
           // body...
       });
 }
+
+$scope.showAlert = function(message) {
+    var alertPopup = $ionicPopup.alert({
+      title: 'Message',
+      template: message
+    });
+    alertPopup.then(function(res) {
+      console.log(message);
+    });
+  };
   
   
   $scope.leaderboard=function(obj){

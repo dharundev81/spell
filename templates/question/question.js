@@ -211,14 +211,14 @@ $scope.toast=function() {
   var x = document.getElementById("snackbar")
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  console.log("toast");
+  
 }
 
 $scope.toast1=function() {
   var x = document.getElementById("snackbar2")
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  console.log("toast");
+  
 }
 //toast-end
 
@@ -237,25 +237,14 @@ $scope.update_score1=function(score){
        console.log(data);
        if(data.status==7400){
        }else{
-  MessageNotify(data.message)
+          MessageNotify(data.message)
        }
    },function (error) {
        // body...
    });
 }
 
-
-
-
-
-
 };
-
-
-
-
-
-
 
 app.controller("question",question);
 }());

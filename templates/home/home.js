@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('starter');
-    var hangmanController1 = function ($scope,$state,apiFunc,$rootScope) {
+    var hangmanController1 = function ($scope,$state,apiFunc,$rootScope,$ionicPopup) {
 
  console.log('asd');
 
@@ -144,7 +144,9 @@ $scope.quizz_questions=function(){
               $state.go('user.question');
           // $route.reload();
           }else{
-      MessageNotify(data.message)
+           // showAlert(data.message);
+            console.log(data.message);
+            // MessageNotify(data.message)
           }
       },function (error) {
           // body...

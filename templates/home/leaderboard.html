@@ -1,5 +1,5 @@
-<div view-title="login" style="background-color: #fddf2f; overflow-y: auto;">
-    <div ng-controller="hangmanController1" class="bg-pat2s container">
+<div view-title="login" class="bg-gradiant" style="overflow-y: auto;">
+    <div ng-controller="hangmanController1" class=" container">
         <div class="container">
              <div class="row">
                 <div class="col-md-4">
@@ -9,7 +9,7 @@
             </div> 
         </div>
         <center class="font-20 p-left-3 m-bottom-10 font-class"> 
-            leader Board
+            <h1>leader Board</h1>
         </center>
         <div class="row mp-top-2">
             <div class="col-md-1"></div>
@@ -18,20 +18,20 @@
                     <table class="table table-bordered text-align" id="example">
                         <thead>
                             <tr>
-                                <th class="font-class" colspan="2">Hangman</th>
+                                <th class="font-class" colspan="2"><h2>Hangman</h2></th>
                             </tr>
                             <tr>
-                                <th><div class="font-class">User Name</div></th>
-                                <th><div class="font-class">High Score</div></th>
+                                <th><div class="font-class"><h4>User Name</h4></div></th>
+                                <th><div class="font-class"><h4>High Score</h4></div></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="list in leaderboard_list_data">
                                 <td>
-                                    <div class="font-class">{{list.username}}</div>
+                                    <div class="font-class"><h5>{{list.username}}</h5></div>
                                 </td>
                                 <td>
-                                    <div class="font-class">{{list.score}}</div>
+                                    <div class="font-class"><h5>{{list.score}}</h5></div>
                                 </td>
                             </tr>
                         </tbody>
@@ -67,20 +67,20 @@
                     <table class="table table-bordered text-align" id="example">
                         <thead>
                             <tr>
-                                <th class="font-class" colspan="2">Quiz</th>
+                                <th class="font-class" colspan="2"><h2>Quiz</h2></th>
                             </tr>
                             <tr>
-                                <th><div class="font-class">User Name</div></th>
-                                <th><div class="font-class">High Score</div></th>
+                                <th><div class="font-class"><h4>User Name</h4></div></th>
+                                <th><div class="font-class"><h4>High Score</h4></div></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="list1 in leaderboard_list_data1">
                                 <td>
-                                    <div class="font-class">{{list1.username}}</div>
+                                    <div class="font-class"><h5>{{list1.username}}</h5></div>
                                 </td>
                                 <td>
-                                    <div class="font-class">{{list1.score}}</div>
+                                    <div class="font-class"><h5>{{list1.score}}</h5></div>
                                 </td>
                             </tr>
                         </tbody>

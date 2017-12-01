@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('starter');
-    var loginctrl = function ($scope,$state,apiFunc,$ionicHistory,$ionicLoading) {
+    var loginctrl = function ($scope,$state,apiFunc,$ionicHistory,$ionicLoading,$ionicPopup) {
 
  console.log('asd');
 
@@ -64,8 +64,8 @@ var data= {
              $state.go('user.home');
              //$scope.get_questions_values();
                     }else{
-                  $ionicLoading.hide();
-                      MessageNotify(result.message);
+                      //$scope.showAlert(result.message);
+                      showAlert(result.message);
                     }
                   },
                   function(err){

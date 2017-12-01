@@ -99,8 +99,8 @@ $scope.new_game=function(){
 //set up new puzzle when user clicks "start over"
 $('#game-over-replay').click(function(){
   console.log('befrore',index_value);
-index_value++;
-  $scope.total_values++;
+  index_value++;
+  
   setUp();
 console.log('count',index_value);
 
@@ -203,10 +203,19 @@ function newPuzzle() {
 var hint_word=JSON.parse(localStorage.getItem('given_hint'));
   var word=JSON.parse(localStorage.getItem('given_word'));
   var id_value=JSON.parse(localStorage.getItem('id_arr'));
+  var phonetics= JSON.parse(localStorage.getItem('phonetics'));
 
   console.log(hint_word);
 
 console.log(word);
+
+for (var i = 0; i < phonetics.length; i++) {
+  // console.log;
+  if(i == index_value){
+  var pho=phonetics[i];
+  console.log(pho);    
+  }
+}
 
 for (var i = 0; i < hint_word.length; i++) {
   // console.log(i);
@@ -234,6 +243,7 @@ for (var i = 0; i < id_value.length; i++) {
   }
 }
 
+  var given_phonetics_words = phonetics.splice(Math.floor(random*phonetics.length), 1);
 
   var given_hint_words = hint_word.splice(Math.floor(random*hint_word.length), 1);
 
@@ -245,6 +255,10 @@ for (var i = 0; i < id_value.length; i++) {
 // console.log(given_answer_words[0]);
 // console.log(given_hint_words[0]);
 
+if(id==undefined){
+  $state.go("user.home");
+  }
+
 
   console.log(id);    
 $scope.update_id=id;
@@ -253,6 +267,8 @@ console.log($scope.update_id);
   $scope.myvalue=newPuzzle1;
   $scope.given_hint_word=given_hint_words;
   $scope.given_hint_word1=hint_value;
+  $scope.given_phonetics_word=pho;
+  $scope.given_ans_word=word_value;
   // console.log(newPuzzle[0]);
   // console.log(newPuzzle1[0]);
 
@@ -273,7 +289,10 @@ function parseSVG(s) {
 $scope.showAlert = function() {
             $ionicPopup.alert({
               title: 'you Lose',
-              content: 'Try Again Next time'
+              scope: $scope,
+              content: `Answer: &nbsp <b>{{given_ans_word}}</b> <br>
+                        Meaning: &nbsp <b>{{given_hint_word1}}</b> <br>
+                        Phonetics: &nbsp <b>{{given_phonetics_word}}</b>`
             }).then(function(res) {
               document.getElementById('game-over-replay').click();
               console.log('You Lose');
@@ -283,7 +302,9 @@ $scope.showAlert = function() {
           $scope.showAlert1 = function() {
             $ionicPopup.alert({
               title: 'you Won',
-              content: 'Try Your Next Level'
+              content: `Answer: &nbsp <b>{{given_ans_word}}</b> <br>
+                        Meaning: &nbsp <b>{{given_hint_word1}}</b> <br>
+                        Phonetics: &nbsp <b>{{given_phonetics_word}}</b>`
             }).then(function(res) {
               document.getElementById('game-over-replay').click();
               console.log('You Win');
@@ -293,16 +314,17 @@ $scope.showAlert = function() {
 function gameOver(won) {
   if(!won) {
 $scope.showAlert();
-    $('.game-over-lost').show();
-    $('.game-over-won').hide();
+    // $('.game-over-lost').show();
+    // $('.game-over-won').hide();
     $('.hangman-puzzle-letters').each(function(index) {
       console.log($(this).html());
       if($(this).html() == "&nbsp;" && !$(this).hasClass("space")) {
         $(this).html(puzzle.charAt(index));
-        $(this).addClass('game-lost');
+        // $(this).addClass('game-lost');
       }
     });
 $scope.lose_values++;
+$scope.total_values++;
 var object1=$scope.lose_values;
   $scope.update_score($scope.win_values);
 console.log(object1);
@@ -311,19 +333,21 @@ console.log(object1);
   }
   else {  
     $scope.showAlert1();
-$scope.win_values++;
-var object=$scope.win_values;
-  $scope.update_score($scope.win_values);
-console.log(object);
+  $scope.win_values++;
+  var object=$scope.win_values;
+  $scope.total_values++;
+    $scope.update_score($scope.win_values);
+  console.log(object);
     localStorage.setItem('win', object);
+    
 
 
 // Retrieve the object from storage
 
-    $('.game-over-lost').hide();
-    $('.game-over-won').show();
+    // $('.game-over-lost').hide();
+    // $('.game-over-won').show();
   }
-  $('.game-over').show();
+  // $('.game-over').show();
 }
 
 
