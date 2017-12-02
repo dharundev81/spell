@@ -2,13 +2,13 @@
   <ion-content class="bg-gradiant" ng-controller="hangmanController2">
       <div class="container">
           <div class="row">
-             <div class="col-md-4">
-             <img src="img/Spell.jpg" >
+             <div class="col-md-4 col-sm-12 col-lg-4 col-xs-12">
+             <img src="img/Spell.jpg" class="img-responsive" >
              </div>
-             <div class="col-md-5" ng-include="'templates/home-new/home-desk.html'"></div>
-             <div class="col-md-3 pull-right m-top-60 p-all-0" >
-                <ul class="nav justify-content-end pull-right scorecard">
-                    <li class="nav-item">
+             <div class="col-md-5 col-sm-12 col-lg-5 col-xs-12" ng-include="'templates/home-new/home-desk.html'"></div>
+             <div class="col-md-3 col-sm-12 col-xs-12 pull-right m-top-25 p-all-0" >
+                <ul class="nav justify-content-end pull-right scorecard shadow-board">
+                    <li class="nav-item m-left--10">
                       <a class="nav-link active" >Total :  {{total_values}}</a>
                     </li>
                     <li class="nav-item">
@@ -39,7 +39,7 @@
 </div> -->
 
 
-  <div class="hangman scorecard2">
+  <div class="hangman scorecard2 shadow-board m-top-10">
   <div class="hangman-results">
     <div class="hangman-hangman">
     <div class="row">

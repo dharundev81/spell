@@ -64,8 +64,8 @@ var data= {
              $state.go('user.home');
              //$scope.get_questions_values();
                     }else{
-                      //$scope.showAlert(result.message);
-                      showAlert(result.message);
+                      $scope.showAlert(result.message);
+                      //showAlert(result.message);
                     }
                   },
                   function(err){
@@ -73,6 +73,16 @@ var data= {
                   }
                   );
             }
+
+            $scope.showAlert = function(message) {
+              var alertPopup = $ionicPopup.alert({
+                title: 'Message',
+                template: message
+              });
+              alertPopup.then(function(res) {
+                console.log(message);
+              });
+            };
 
 //login-function
 

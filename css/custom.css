@@ -908,7 +908,7 @@ background-color: cadetblue !important;
 .scorecard{
     background: #f1f0f0;
     border-radius: 38px;
-    border: 2px solid grey;
+    /*border: 2px solid grey;*/
     /* padding: 0px; */
     margin: 0 0 0px !important;
     font: italic small-caps bolder condensed 14px/3 cursive;
@@ -1032,4 +1032,19 @@ background-color: cadetblue !important;
 
 .popup-title{
     font-size: 20px;
+}
+
+.shadow-board{
+    background: linear-gradient(224.86deg, #EAFAFF 0%, #F7F7F7 100%);
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 0px;
+}
+
+.m-left--10{
+    margin-left: -10px !important;
+}
+
+.m-left--10{
+    margin-left: -10px;
 }

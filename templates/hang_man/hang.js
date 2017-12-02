@@ -302,6 +302,7 @@ $scope.showAlert = function() {
           $scope.showAlert1 = function() {
             $ionicPopup.alert({
               title: 'you Won',
+              scope:$scope,
               content: `Answer: &nbsp <b>{{given_ans_word}}</b> <br>
                         Meaning: &nbsp <b>{{given_hint_word1}}</b> <br>
                         Phonetics: &nbsp <b>{{given_phonetics_word}}</b>`
