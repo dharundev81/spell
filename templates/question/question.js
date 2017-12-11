@@ -90,6 +90,24 @@ $ionicModal.fromTemplateUrl('templates/question/my-modal.html', {
   $state.go('user.home');
   }
 
+  $scope.go_about=function(){
+    //var promise = $timeout(getRestDataFromServer, 2000);
+    $scope.$on('$destroy', function(){
+        $timeout.cancel(mytimeout);
+    });
+        $scope.modal.hide();
+  $state.go('user.about');
+  }
+
+  $scope.go_leaderboard=function(){
+    //var promise = $timeout(getRestDataFromServer, 2000);
+    $scope.$on('$destroy', function(){
+        $timeout.cancel(mytimeout);
+    });
+        $scope.modal.hide();
+  $state.go('user.leaderboard');
+  }
+
   /*window.onhashchange = function() {
     $scope.modal.hide();
     $state.go('user.home');

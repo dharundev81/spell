@@ -1016,7 +1016,9 @@ background-color: cadetblue !important;
 }
 
 .bg-gradiant{
-    background: linear-gradient(151.05deg, #fddf2f 21%, #A951ED 100%) !important;
+    /* background: linear-gradient(151.05deg, #fddf2f 21%, #A951ED 100%) !important; */
+    background: url(../img/spell_logo.jpg);
+    background-repeat: round;
 }
 .bg-yellow{
     background-color: #fddf2f;
@@ -1047,4 +1049,8 @@ background-color: cadetblue !important;
 
 .m-left--10{
     margin-left: -10px;
+}
+
+.height-inherit{
+    height: inherit;
 }
